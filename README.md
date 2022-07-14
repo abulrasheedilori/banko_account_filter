@@ -2,6 +2,8 @@
 Banko Account Filter is a react-native assessment snippet to demonstrate expertise in mastering react-native tooling to build robust application.
 This snippet make use of an account history search filter that allow ease of searching through a list of records. 
 
+NOTE: I logically donot see any reason for a filter when the user can just search the records with the particular criteria and the list is automatically filtered to such input so I removed the filtering button. I hope this is okay though.
+
 TECHNOLOGY: React-native
 
 IMAGES:
