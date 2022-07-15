@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback} from "react";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { FlatList, Text, TextInput, View } from "react-native";
@@ -12,14 +12,14 @@ export default function App() {
   const [input, setInput] = useState("");
   const [data, setData] = useState(DATA);
 
-  const handleSearchQuery = (text, list) => {
+  const handleSearchQuery = useCallback((text, list) => {
     const formatedInput = text.toLowerCase();
     const filteredData = list.filter((value) => {
       return check(value, formatedInput);
     });
     setData(filteredData);
     setInput(text);
-  };
+  }, [input]);
 
   const renderItem = ({ item }) => <AccountItems item={item} />;
 
